@@ -1,0 +1,58 @@
+$table-header: #ededed;
+$border-radius: 20px;
+
+.table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      th {
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: bold;
+        background: $table-header;
+        border: none;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      th:first-child {
+        border-radius: $border-radius 0 0;
+      }
+
+      th:last-child {
+        border-radius: 0 $border-radius 0 0;
+      }
+    }
+  }
+
+  tbody {
+    td {
+      padding: 10px 15px;
+      font-size: 14px;
+      border: none;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    tr {
+      &:nth-child(even) {
+        background: #f8f8f8;
+      }
+
+      &:last-child {
+        td {
+          &:first-child {
+            border-radius: 0 0 0 $border-radius;
+          }
+
+          &:last-child {
+            border-radius: 0 0 $border-radius;
+          }
+        }
+      }
+    }
+  }
+}
